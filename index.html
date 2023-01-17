@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+<html>
+    <head>
+        <title>Interior Measure App</title>
+        <link rel="stylesheet" href="layout.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <p>Room specifications: </p>
+    <div>
+        <label for="w"> Width (ft)</label>
+        <input type="text" id="room-width" required minlength="0" maxlength="5">
+        <label for="h">Height (ft)</label>
+        <input type="text" id="room-height" required minlength="0" maxlength="5">
+        <label for="d">Depth (ft)</label>
+        <input type="text" id="room-depth" required minlength="0" maxlength="5">
+    </div>
+    <div>
+        <button>Render</button>
+    </div>
+
+    <p>Add furniture: </p>
+    <div>
+        <label for="w">Width (ft)</label>
+        <input type="text" id="furniture-width" required minlength="0" maxlength="5">
+        <label for="h">Height</label>
+        <input type="text" id="furniture-height" required minlength="0" maxlength="5">
+        <label for="d">Depth</label>
+        <input type="text" id="furniture-depth" required minlength="0" maxlength="5">
+    </div>
+    <div>
+        <button>Render</button>
+    </div>
+
+
+    <body onload = "main()">
+        <canvas id = "glcanvas" width = "400" height = "400"></canvas>
+    <script type="text/javascript" src="main.js"></script>
+    </body> 
+</html>
+
