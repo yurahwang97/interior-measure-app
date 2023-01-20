@@ -1,3 +1,38 @@
+/* 
+* / ===================================================================== /
+* / Toy program for interior measurement application                      /
+* / written by Yura Hwang (CONTACT: yura.hwang@utah.edu)                  /                                    /
+* / ===================================================================== /
+*/
+
+
+var test_scene;
+
+function initCanvas(gl) {
+    // Draw 
+    gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+}
+
+
+function init(gl) {
+    // Create scene object 
+    test_scene = new Scene('test');
+    // Init 
+    test_scene.init(gl); 
+}
+
+
+function render(gl) {
+    test_scene.render(gl); 
+}
+
+
+function handler() {
+    // Initially empty 
+}
+
+
 function main() {
     // Setup WebGL context 
     var canvas = document.getElementById('glcanvas');
@@ -8,7 +43,13 @@ function main() {
     if (!gl) 
         alert("Unable to initialize WebGL 2.0");
         
-    // Draw 
-    //gl.fillStyle = 'rgba(0,0,255,1.0)' // Set color 
-    //gl.fillRect(120,10,150,150); // Color rectangle  
-}
+
+    // Init canvas 
+    initCanvas(gl); 
+    // Init scene 
+    init(gl);
+    // Render scene
+    render(gl);  
+    // Invoke handlers 
+    handler(); 
+} 
